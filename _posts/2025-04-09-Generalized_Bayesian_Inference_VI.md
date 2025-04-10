@@ -59,12 +59,12 @@ The posterior that minimizes this KL divergence is just $$\pi^*(\theta) \propto 
 
 Now, how does this connect to variational inference? Instead of considering all possible posteriors, let's assume the posterior takes a form $$q(\theta\mid\psi)$$ for our parameters of interest $$\theta$$ and tunable parameters $$\psi$$. We will also choose the classical loss function $$\ell_\theta(x) = -\text{log } p(x\mid\theta)$$. In that case, our risk minimization looks like:
 
-$$q^*=argmin_\psi R(\psi,p(\theta),x) = - E_{\theta\sim q}(\text{log } p(x|\theta)) + KL(q(\theta|\psi)||p(\theta))$$
+$$q^*=argmin_\psi R(\psi,p(\theta),x) = argmin_\psi (- E_{\theta\sim q}(\text{log } p(x|\theta)) + KL(q(\theta|\psi)||p(\theta)))$$
 
 We can rewrite this as:
 
-$$q^*=argmax_\psi R(\psi, p(\theta), x)=E_{\theta\sim q}(\text{log } p(x|\theta)) - KL(q(\theta|\psi)||p(\theta))$$
+$$q^*=argmax_\psi R(\psi, p(\theta), x)= argmax_\psi (E_{\theta\sim q}(\text{log } p(x|\theta)) - KL(q(\theta|\psi)||p(\theta)))$$
 
-This is the ELBO! So, under GBI, VI is just a special case where we assume that the distribution takes a particular form.
+That means we maximize the ELBO! So, under GBI, VI is just a special case where we assume that the distribution takes a particular form.
 ### Concluding Remarks
 I hope that all made sense and was useful! I have been thinking about GBI a lot, so this felt more intuitive. Under the GBI perspective, VI isn't a cheap method for faster inference but a natural method for those willing to constrain their updated belief to a family of distributions. In this sense, VI can be viewed as a fully Bayesian update procedure.
