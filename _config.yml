@@ -3,6 +3,3 @@ title: Wesley's Modeling Blog
 theme: minima
 plugins:
  - jekyll-feed
-
-include:
-  - _includes/head-custom.html
