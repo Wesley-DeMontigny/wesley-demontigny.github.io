@@ -1,3 +1,7 @@
+---
+title: "Variational Bayes from a Generalized Bayesian Inference Perspective"
+layout: default
+---
 ### Variational Bayes from a Generalized Bayesian Inference Perspective
 Markov Chain Monte Carlo (MCMC) is an amazing tool for Bayesian inference, but it's unfortunately quite computationally intensive. Often, that's fine, and we're willing to wait for an asymptotically exact answer. But that isn't always the case. Certain models are so complicated that the Markov chain will fail to converge until we are all dead. And depending on the application, even a day may be far too long to wait for a model to be fit! In these situations, we need an alternative to MCMC.
 
