@@ -10,6 +10,8 @@ tags: [generalized bayesian, VI, inference]
   async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+
+{% raw %}
 Markov Chain Monte Carlo (MCMC) is an amazing tool for Bayesian inference, but it's unfortunately quite computationally intensive. Often, that's fine, and we're willing to wait for an asymptotically exact answer. But that isn't always the case. Certain models are so complicated that the Markov chain will fail to converge until we are all dead. And depending on the application, even a day may be far too long to wait for a model to be fit! In these situations, we need an alternative to MCMC.
 
 Variational inference (VI) is one such alternative. It aims to approximate the posterior distribution by using a tractable "variational" distribution to represent the true posterior. This turns Bayesian inference into an optimization problem: instead of sampling from the posterior, we optimize the parameters of the variational distribution to make it as close to the true posterior as possible. For example, suppose we believe that our posterior is roughly Gaussian-shaped. In that case, we may use a Gaussian as our variational distribution for our parameter \(\theta\), and optimize the mean \(\mu\) and variance \(\sigma^2\) accordingly. While this approach has its downsides, it is generally much faster than MCMC.
@@ -45,3 +47,5 @@ We can rewrite this as:
 This is the ELBO! So, under GBI, VI is just a special case where we assume that the distribution takes a particular form.
 ### Concluding Remarks
 I hope that all made sense and was useful! I have been thinking about GBI a lot, so this felt more intuitive. Under the GBI perspective, VI isn't a cheap method for faster inference but a natural method for those willing to constrain their updated belief to a family of distributions. In this sense, VI can be viewed as a fully Bayesian update procedure.
+
+{% endraw %}
