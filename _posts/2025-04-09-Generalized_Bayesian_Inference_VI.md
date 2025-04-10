@@ -21,7 +21,7 @@ Suppose we have some variational distribution $$q(\theta | \psi)$$ that we want 
 
 $$KL(q(\theta|\psi) ||p(\theta|x)) = E_{\theta \sim q}(\text{log }\frac{q(\theta|\psi)}{p(\theta|x)})$$
 
-We can expand $$p(\theta | x) = \frac{p(\theta, x)}{p(x)}$$, so that we get:
+We can expand $$p(\theta|x) = \frac{p(\theta, x)}{p(x)}$$, so that we get:
 
 $$=E_{\theta \sim q}(\text{log }\frac{q(\theta|\psi)}{p(\theta,x)} + \text{log }p(x))$$
 
@@ -55,9 +55,9 @@ We can move $$\ell_\theta(x)$$ inside the log so we get:
 
 $$R(\pi,p(\theta),x)=\int\pi(\theta)\text{log }\frac{\pi(\theta)}{exp(-\ell_\theta(x))p(\theta)}d\theta = KL(\pi(\theta) || exp(-\ell_\theta(x))p(\theta))$$
 
-The posterior that minimizes this KL divergence is just $$\pi^*(\theta) \propto exp(-\ell_\theta(x))p(\theta)$$! We call this the "Gibbs posterior" because it looks like a Gibbs distribution with an energy function $$\ell_\theta$$ multiplied by some prior. If we choose a loss function $$\ell_\theta(x) = - \text{log } p(x | \theta)$$, we get the classical posterior, $$\pi(\theta) \propto p(x|\theta)p(\theta)$$! However, something really amazing here is that we could have chosen another loss function, and we would still be able to do Bayesian updating. This isn't exactly a trivial thing to do, but it is totally legitimate under GBI.
+The posterior that minimizes this KL divergence is just $$\pi^*(\theta) \propto exp(-\ell_\theta(x))p(\theta)$$! We call this the "Gibbs posterior" because it looks like a Gibbs distribution with an energy function $$\ell_\theta$$ multiplied by some prior. If we choose a loss function $$\ell_\theta(x) = - \text{log } p(x|\theta)$$, we get the classical posterior, $$\pi(\theta) \propto p(x|\theta)p(\theta)$$! However, something really amazing here is that we could have chosen another loss function, and we would still be able to do Bayesian updating. This isn't exactly a trivial thing to do, but it is totally legitimate under GBI.
 
-Now, how does this connect to variational inference? Instead of considering all possible posteriors, let's assume the posterior takes a form $$q(\theta | \psi)$$ for our parameters of interest $$\theta$$ and tunable parameters $$\psi$$. We will also choose the classical loss function $$\ell_\theta(x) = -\text{log } p(x|\theta)$$. In that case, our risk minimization looks like:
+Now, how does this connect to variational inference? Instead of considering all possible posteriors, let's assume the posterior takes a form $$q(\theta|\psi)$$ for our parameters of interest $$\theta$$ and tunable parameters $$\psi$$. We will also choose the classical loss function $$\ell_\theta(x) = -\text{log } p(x|\theta)$$. In that case, our risk minimization looks like:
 
 $$q^*=argmin_\psi(\psi,p(\theta),x) = - E_{\theta\sim q}(\text{log } p(x|\theta)) + KL(q(\theta|\psi)||p(\theta))$$
 
