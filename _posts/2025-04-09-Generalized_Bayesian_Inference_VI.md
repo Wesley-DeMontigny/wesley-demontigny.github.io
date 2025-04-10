@@ -1,8 +1,10 @@
 ---
 title: "Variational Bayes from a Generalized Bayesian Inference Perspective"
-layout: default
+layout: post
+date: 2025-04-09
+categories: [Bayesian, Variational Inference]
+tags: [generalized bayesian, VI, inference]
 ---
-### Variational Bayes from a Generalized Bayesian Inference Perspective
 Markov Chain Monte Carlo (MCMC) is an amazing tool for Bayesian inference, but it's unfortunately quite computationally intensive. Often, that's fine, and we're willing to wait for an asymptotically exact answer. But that isn't always the case. Certain models are so complicated that the Markov chain will fail to converge until we are all dead. And depending on the application, even a day may be far too long to wait for a model to be fit! In these situations, we need an alternative to MCMC.
 
 Variational inference (VI) is one such alternative. It aims to approximate the posterior distribution by using a tractable "variational" distribution to represent the true posterior. This turns Bayesian inference into an optimization problem: instead of sampling from the posterior, we optimize the parameters of the variational distribution to make it as close to the true posterior as possible. For example, suppose we believe that our posterior is roughly Gaussian-shaped. In that case, we may use a Gaussian as our variational distribution for our parameter $\theta$, and optimize the mean $\mu$ and variance $\sigma^2$ accordingly. While this approach has its downsides, it is generally much faster than MCMC.
