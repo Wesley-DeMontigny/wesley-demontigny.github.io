@@ -59,11 +59,11 @@ The posterior that minimizes this KL divergence is just $$\pi^*(\theta) \propto 
 
 Now, how does this connect to variational inference? Instead of considering all possible posteriors, let's assume the posterior takes a form $$q(\theta\mid\psi)$$ for our parameters of interest $$\theta$$ and tunable parameters $$\psi$$. We will also choose the classical loss function $$\ell_\theta(x) = -\text{log } p(x\mid\theta)$$. In that case, our risk minimization looks like:
 
-$$q^*=argmin_\psi(\psi,p(\theta),x) = - E_{\theta\sim q}(\text{log } p(x|\theta)) + KL(q(\theta|\psi)||p(\theta))$$
+$$q^*=argmin_\psi R(\psi,p(\theta),x) = - E_{\theta\sim q}(\text{log } p(x|\theta)) + KL(q(\theta|\psi)||p(\theta))$$
 
 We can rewrite this as:
 
-$$q^*=argmax_\psi(\psi, p(\theta), x)=E_{\theta\sim q}(\text{log } p(x|\theta)) - KL(q(\theta|\psi)||p(\theta))$$
+$$q^*=argmax_\psi R(\psi, p(\theta), x)=E_{\theta\sim q}(\text{log } p(x|\theta)) - KL(q(\theta|\psi)||p(\theta))$$
 
 This is the ELBO! So, under GBI, VI is just a special case where we assume that the distribution takes a particular form.
 ### Concluding Remarks
