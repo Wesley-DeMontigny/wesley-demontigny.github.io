@@ -3,6 +3,6 @@ author:
   name: Wesley DeMontigny
   email: wes.demontigny@gmail.com
 
-remote_theme: pages-themes/primer
+theme: minima
 plugins:
- - jekyll-remote-theme
+ - jekyll-feed
