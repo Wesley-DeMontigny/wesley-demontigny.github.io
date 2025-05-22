@@ -17,7 +17,8 @@ Briefly, this is how the simulation works:
 2. Compute the event rates:
     - Prey birth: $$b \cdot \beta_\text{prey}$$
     - Prey death: $$b \cdot \gamma_\text{prey}$$
-    - Predation (prey dies, predator reproduces): $$a \cdot b \cdot \epsilon$$
+    - Predator birth: $$a \cdot b \cdot \beta_\text{predator}$$
+    - Predation: $$a \cdot b \cdot \epsilon$$
     - Predator death: $$a \cdot \gamma_\text{predator}$$
 3. Sum all event rates to get the total event rate $$r$$, and draw a waiting time $$t \sim \text{Exponential}(r)$$.
 4. Choose an event with probability proportional to its rate (e.g., the probability of predation is $$\frac{a \cdot b \cdot \epsilon}{r}$$), then update the system accordingly.
