@@ -1,5 +1,5 @@
 ---
-title: "Inference Under Stochastic Lotka-Volterra using Sequential Neural Likelihood Estimation"
+title: "Modeling Stochastic Lotka-Volterra using Sequential Neural Likelihood Estimation"
 layout: post
 date: 2025-05-22
 categories: [MCMC, Neural Networks]
