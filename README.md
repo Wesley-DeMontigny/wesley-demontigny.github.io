@@ -6,7 +6,7 @@ Hi! I'm Wesley DeMontigny, a Ph.D. student in biology at the University of Maryl
 
 ### Bioinformatics / Data Analysis
 - [**The nuclear and mitochondrial genomes of _Amoebophrya_ sp. ex _Karlodinium veneficum_**](https://doi.org/10.1093/g3journal/jkaf030) <br>
-  Bioinformatic analysis of dinoflagellate parasite genomes, focusing on alternative genetic code usage and apparent reshuffling of mitochondrial genomes.
+  Bioinformatic analysis of dinoflagellate parasite genomes, focusing on alternative genetic code usage and apparent heterogeneity of mitochondrial genomes.
 
 ---
 
