@@ -76,8 +76,8 @@ P(z=0 \mid x) &\propto P(z=0)P(x \mid z=0) \\
 + (1-\alpha)P(z=0)P(x \mid z=0,\tilde z=0) \\
 &=
 \begin{cases}
-\alpha (1-q)(1-\psi)p + (1-\alpha)(1-\psi)p & \text{if } x=0 \\
-\alpha q(1-\psi) + (1-\alpha)(1-p)(1-\psi) & \text{if } x=1
+p(1-\psi)(\alpha (1-q) + (1-\alpha)) & \text{if } x=0 \\
+(1-\psi)(\alpha q + (1-\alpha)(1-p)) & \text{if } x=1
 \end{cases}
 \\\\
 P(z=1 \mid x) &\propto P(z=1)P(x \mid z=1)
@@ -96,6 +96,8 @@ P(z=1 \mid x=1) =
 \frac{\psi}{\psi + \alpha q(1-\psi) + (1-\alpha)(1-p)(1-\psi)}.
 $$
 
-Notice that we now have a mixture of processes happening here. We have a friend that is exposed to fraudulent sweepstakes at a frequency $$\alpha$$. Think about how simple this example was. The situation is not particularly complex, and yet we suddenly have a lot of factors to consider. If we also had to assess uncertainty in each of the parameters mentioned above (say we aren't certain about $$\alpha$$ or $$p$$), or if we had uncertainty in the generative model itself, then the situation becomes much closer to claims contributing essentially no evidence. Here, I also made the basic assumption that the lying was one-way! This is also generally not the case and would significantly change how we update our beliefs given a claim.
+Notice that we now have a mixture of processes happening here. We have a friend that is exposed to fraudulent sweepstakes at a frequency $$\alpha$$. Think about how simple this example was. The situation is not particularly complex, and yet we suddenly have a lot of factors to consider. I have actually simplified this a good amount by allowing our friend to perfectly detect true sweepstakes, but what if he couldn't do that?
+
+If we also had to assess uncertainty in each of the parameters mentioned above (say we aren't certain about $$\alpha$$ or $$p$$), or if we had uncertainty in the generative model itself, then the situation becomes much closer to claims contributing essentially no evidence. Here, I also made the basic assumption that the lying was one-way! This is also generally not the case and would significantly change how we update our beliefs given a claim.
 
 YouTuber **A** was right: the evidential value of claims is incredibly dependent on our prior knowledge of the subject. But I do not know if I would strictly phrase it as "claims not being evidence." It is more like this: without strong background and domain knowledge on a given subject, claims themselves should not have much sway on our beliefs, as they are extremely weak measurements of the truth.
