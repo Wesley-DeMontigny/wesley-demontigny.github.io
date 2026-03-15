@@ -76,8 +76,8 @@ P(z=0 \mid x) &\propto P(z=0)P(x \mid z=0) \\
 + (1-\alpha)P(z=0)P(x \mid z=0,\tilde z=0) \\
 &=
 \begin{cases}
-\alpha (1-q)(1-\psi)+(1-\alpha)(1-\psi) & \text{if } x=0 \\
-\alpha q(1-\psi)+(1-\alpha)(1-p)(1-\psi) & \text{if } x=1
+\alpha (1-q)(1-\psi)p + (1-\alpha)(1-\psi)p & \text{if } x=0 \\
+\alpha q(1-\psi) + (1-\alpha)(1-p)(1-\psi) & \text{if } x=1
 \end{cases}
 \\\\
 P(z=1 \mid x) &\propto P(z=1)P(x \mid z=1)
