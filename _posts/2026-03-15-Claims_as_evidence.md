@@ -1,7 +1,7 @@
 ---
 title: "When Are Claims Evidence?"
 layout: post
-date: 2026-15-03
+date: 2026-03-15
 categories: [Bayesian, Probability]
 tags: [probability]
 ---
