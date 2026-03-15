@@ -11,6 +11,7 @@ Hi! I'm Wesley DeMontigny, a Ph.D. student in biology at the University of Maryl
 ### Statistical Modeling
 - [**Inferring Gene Presence in Incomplete Data via Phylogenetic Occupancy Modeling**](https://www.biorxiv.org/content/10.64898/2026.02.27.708499v1) <br>
   In this paper I developed and benchmarked a novel statistical model, utilizing belief networks to construct a joint distribution over latent gene presence.
+
 ---
 
 ## Software & Tools
