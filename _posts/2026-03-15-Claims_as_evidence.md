@@ -46,8 +46,8 @@ P(z=0 \mid x) &\propto P(z=0)P(x \mid z=0)
 P(z=1 \mid x) &\propto P(z=1)P(x \mid z=1)
 =
 \begin{cases}
-\psi p & \text{if } x=0 \\
-\psi (1-p) & \text{if } x=1
+\psi (1-p) & \text{if } x=0 \\
+\psi p & \text{if } x=1
 \end{cases}
 \end{aligned}
 $$
@@ -58,9 +58,9 @@ Here I have not written out the normalization constants (hence the symbol $$\pro
 
 $$
 P(z=1 \mid x=0) = 
-\frac{\psi p}{(1-\psi)+\psi p}
+\frac{\psi (1-p)}{(1-\psi)+\psi (1-p)}
 =
-\frac{\psi p}{1-\psi+\psi p}.
+\frac{\psi - \psi p}{1 - \psi p}
 $$
 
 By this very simple introduction of untruthfulness, we have injected some very serious assumptions. If we do not have perfect correspondence of $$x$$ to $$z$$, we now need to rely not only on the truthfulness of our friend, $$p$$, but also on how reasonable it is that he would buy a soccer ball in the first place, $$\psi$$. 
