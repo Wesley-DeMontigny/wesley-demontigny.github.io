@@ -52,7 +52,7 @@ P(z=1 \mid x) &\propto P(z=1)P(x \mid z=1)
 \end{aligned}
 $$
 
-Notice that an extra term has appeared here, $$\psi$$. This is the prior probability that our friend (or maybe anyone, depending on how you'd like to set it up) would buy a soccer ball. If we consider the case where $$x=0$$, that is, he has claimed that he has not bought a soccer ball, we get a probability of truth equal to
+Notice that an extra term has appeared here, $$\psi$$. This is the prior probability that our friend (or maybe anyone, depending on how you'd like to set it up) would buy a soccer ball. If we consider the case where $$x=0$$, that is, he has claimed that he has not bought a soccer ball, we get a probability that he has bought the soccer ball equal to
 
 $$
 P(z=1 \mid x=0) = 
