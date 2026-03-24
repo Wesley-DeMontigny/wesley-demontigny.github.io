@@ -1,7 +1,11 @@
-title: Probabilistic Modeling & Inference
+title: Wesley DeMontigny
+description: Probabilistic modeling, computational biology, and scientific software
 theme: minima
 plugins:
  - jekyll-feed
+header_pages:
+ - writing/index.html
+excerpt_separator: <!--more-->
 
 markdown: kramdown
 kramdown:
