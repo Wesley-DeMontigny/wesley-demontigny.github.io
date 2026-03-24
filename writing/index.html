@@ -1,0 +1,23 @@
+---
+layout: default
+title: Blog
+permalink: /writing/
+---
+
+<section class="section-block writing-archive">
+  <div class="section-heading">
+    <p class="eyebrow">Blog</p>
+    <p>
+      Essays, technical walkthroughs, and modeling notes.
+    </p>
+  </div>
+  <div class="archive-list">
+    {% for post in site.posts %}
+      <article class="archive-item">
+        <p class="writing-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncatewords: 36 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

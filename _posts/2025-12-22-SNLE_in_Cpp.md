@@ -10,8 +10,10 @@ tags: [mcmc, neural networks, c++]
   async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+
 A recent pre-print by [Blassel et al. (2025)](https://arxiv.org/abs/2510.12976) renewed my interest in simulation-based inference. In this post, I revisit my [sequential neural likelihood estimator](https://wesley-demontigny.github.io/mcmc/neural%20networks/2025/05/22/SNLE_Lotka_Volterra.html) for the partially observed stochastic Lotka–Volterra model, reimplemented in C++ using LibTorch and Boost. I assume familiarity with that earlier post and with SNLE in general, and concentrate here on providing C++ implementation. The model itself is nearly identical, with the exception that predator birth is now directly tied to predation in the Gillespie simulator. I also decided that this time I would run Markov chain Monte Carlo with my neural likelihood and determine how good my posterior distributions for the parameters $$\beta_{birth}$$, $$\beta_{predation}$$, $$\beta_{death}$$. In this case, we had $$(\beta_{birth},\beta_{predation}, \beta_{death}) = (0.75,0.01,0.9)$$. The posterior mass concentrates around the true parameters, indicating that our neural likelihood captures the relevant structure of the simulator for these parameter choices.
 ![Neural Lotka–Volterra Dynamics](/assets/lotka_volterra_posterior.png)
+
 ### CMakeLists.txt
 ```CMake
 cmake_minimum_required(VERSION 3.20)

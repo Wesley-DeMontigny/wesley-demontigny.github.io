@@ -5,6 +5,7 @@ date: 2026-03-15
 categories: [Bayesian, Probability]
 tags: [probability]
 ---
+
 <script type="text/javascript"
   id="MathJax-script"
   async

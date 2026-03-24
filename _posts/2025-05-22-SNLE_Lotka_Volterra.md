@@ -10,6 +10,7 @@ tags: [mcmc, neural networks]
   async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+
 Many interesting systems in science can’t be described by closed-form probability distributions. This makes them hard to analyze using classical statistical methods. One common example in biology is the stochastic Lotka–Volterra model, which describes the dynamics of of random predator-prey interactions. It’s a simple model to simulate using the Gillespie algorithm, even though it lacks a closed-form likelihood function.
 
 Briefly, this is how the simulation works:
@@ -565,4 +566,3 @@ if __name__ == "__main__":
     fig.tight_layout()
     fig.savefig("./lotka_volterra_trajectories.png")
 ```
-

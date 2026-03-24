@@ -1,0 +1,134 @@
+---
+layout: default
+title: Portfolio
+---
+
+<section class="portfolio-hero">
+  <div class="hero-copy hero-copy-wide">
+    <div class="hero-slideshow-shell">
+      <div class="hero-slideshow" aria-label="Selected figures">
+        <figure class="hero-slide">
+          <img src="{{ '/assets/collage_images/varying_sel_code.png' | relative_url }}" alt="C plus plus code from adaptive inference software">
+          <figcaption>Scientific software development</figcaption>
+        </figure>
+        <figure class="hero-slide">
+          <img src="{{ '/assets/collage_images/beta_his_dpcmm.png' | relative_url }}" alt="Structure-oriented figure from biological modeling work">
+          <figcaption>Real-world insights</figcaption>
+        </figure>
+        <figure class="hero-slide">
+          <img src="{{ '/assets/collage_images/emp_pr.png' | relative_url }}" alt="Precision recall comparison for genomic imputation models">
+          <figcaption>Model validation</figcaption>
+        </figure>
+        <figure class="hero-slide">
+          <img src="{{ '/assets/collage_images/dpp_manuscript.png' | relative_url }}" alt="Mathematical derivation from a Bayesian nonparametric manuscript">
+          <figcaption>Rigorous mathematical modeling</figcaption>
+        </figure>
+        <figure class="hero-slide">
+          <img src="{{ '/assets/collage_images/trace_comparison.png' | relative_url }}" alt="Trace comparison between two model-fitting approaches">
+          <figcaption>Model comparison</figcaption>
+        </figure>
+        <figure class="hero-slide">
+          <img src="{{ '/assets/collage_images/blobplot.jpeg' | relative_url }}" alt="Blobplot visualization for exploratory genomic analysis">
+          <figcaption>Exploratory analysis</figcaption>
+        </figure>
+      </div>
+    </div>
+    <p class="hero-lead">
+      Hi, I'm Wesley DeMontigny. I build probabilistic models and scientific software.
+    </p>
+    <div class="hero-actions">
+      <a class="button-secondary" href="#completed-work">Completed work</a>
+      <a class="button-secondary" href="{{ '/writing/' | relative_url }}">Blog</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-block" id="completed-work">
+  <div class="section-heading">
+    <p class="eyebrow">Completed Work</p>
+  </div>
+  <div class="project-grid">
+    <article class="project-card">
+      <p class="card-kicker">Publication/Software</p>
+      <h3>Inferring Gene Presence in Incomplete Data via Phylogenetic Occupancy Modeling</h3>
+      <p>
+        A probabilistic graphical model for imputing missing genes in large, highly-incomplete, genomic datasets.
+      </p>
+      <a href="https://www.biorxiv.org/content/10.64898/2026.02.27.708499v1">Read the preprint</a><br>
+      <a href="https://github.com/Wesley-DeMontigny/Phylogenetic-Occupancy-Model">Open repository</a>
+    </article>
+    <article class="project-card">
+      <p class="card-kicker">Publication</p>
+      <h3>The nuclear and mitochondrial genomes of <em>Amoebophrya</em></h3>
+      <p>
+        Bioinformatic analysis of a novel marine parasite genome, including alternative genetic code
+        usage and heterogeneity of mitochondrial genome.
+      </p>
+      <a href="https://doi.org/10.1093/g3journal/jkaf030">View publication</a>
+    </article>
+    <article class="project-card">
+      <p class="card-kicker">Software</p>
+      <h3>Smc-CAT</h3>
+      <p>
+        A C++ sequential Monte Carlo sampler for the CAT model, an important nonparametric Bayesian
+        phylogenetic model.
+      </p>
+      <a href="https://github.com/Wesley-DeMontigny/Smc-CAT">Open repository</a>
+    </article>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="section-heading">
+    <p class="eyebrow">My Current Work</p>
+  </div>
+  <div class="project-grid">
+    <article class="project-card">
+      <p class="card-kicker">Machine learning</p>
+      <h3>Graph neural networks for gene presence prediction</h3>
+      <p>
+        Graph neural networks for link prediction between genes and genomes, drawing inspiration from
+        social recommendation systems.
+      </p>
+    </article>
+    <article class="project-card">
+      <p class="card-kicker">Statistical modeling</p>
+      <h3>Reversible-jump MCMC for hidden evolutionary regimes</h3>
+      <p>
+        A C++ inference engine for infinite-mixture models that detects hidden regime changes in
+        stochastic evolutionary processes.
+      </p>
+    </article>
+    <article class="project-card">
+      <p class="card-kicker">Statistical modeling</p>
+      <h3>Automatic partitioned phylogenetic analyses</h3>
+      <p>
+        A nonparametric Bayesian model that automatically partitions genomic sequences by shared
+        evolutionary parameters.
+      </p>
+    </article>
+    <article class="project-card">
+      <p class="card-kicker">Statistical modeling</p>
+      <h3>Gene presence and absence with shared latent histories</h3>
+      <p>
+        A probabilistic clustering model that jointly infers shared gene histories to impute missing genes in partially observed genomes.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="section-block writing-block">
+  <div class="section-heading">
+    <p class="eyebrow">Blog</p>
+  </div>
+  <div class="writing-list">
+    {% for post in site.posts limit:3 %}
+      <article class="writing-card">
+        <p class="writing-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | default: post.content | strip_html | truncatewords: 28 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+  <p class="archive-link"><a href="{{ '/writing/' | relative_url }}">Go to the blog</a></p>
+</section>
