@@ -116,19 +116,3 @@ title: Portfolio
     </article>
   </div>
 </section>
-
-<section class="section-block writing-block">
-  <div class="section-heading">
-    <p class="eyebrow">Blog</p>
-  </div>
-  <div class="writing-list">
-    {% for post in site.posts limit:3 %}
-      <article class="writing-card">
-        <p class="writing-date">{{ post.date | date: "%B %-d, %Y" }}</p>
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt | default: post.content | strip_html | truncatewords: 28 }}</p>
-      </article>
-    {% endfor %}
-  </div>
-  <p class="archive-link"><a href="{{ '/writing/' | relative_url }}">Go to the blog</a></p>
-</section>
