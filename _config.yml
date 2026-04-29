@@ -5,6 +5,7 @@ plugins:
  - jekyll-feed
 header_pages:
  - writing/index.html
+ - bio/index.html
 excerpt_separator: <!--more-->
 
 markdown: kramdown
