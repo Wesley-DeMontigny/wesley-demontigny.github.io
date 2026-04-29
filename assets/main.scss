@@ -311,8 +311,44 @@ body {
 .project-card,
 .skills-grid article,
 .writing-card,
-.archive-item {
+.archive-item,
+.bio-card {
   padding: 1.5rem;
+}
+
+.bio-card {
+  display: grid;
+  grid-template-columns: minmax(150px, 200px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--portfolio-line);
+  box-shadow: var(--portfolio-shadow);
+  border-radius: 24px;
+}
+
+.bio-portrait-shell {
+  display: flex;
+  justify-content: center;
+}
+
+.bio-portrait {
+  display: block;
+  width: min(100%, 190px);
+  border-radius: 20px;
+  border: 1px solid var(--portfolio-line);
+  box-shadow: 0 12px 24px rgba(19, 38, 47, 0.12);
+}
+
+.bio-copy h1 {
+  margin-bottom: 0.85rem;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.bio-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .featured-project {
@@ -385,7 +421,8 @@ body {
   .impact-strip,
   .project-grid,
   .writing-list,
-  .showcase-card {
+  .showcase-card,
+  .bio-card {
     grid-template-columns: 1fr;
   }
 
@@ -393,7 +430,8 @@ body {
     grid-auto-columns: 92%;
   }
 
-  .hero-copy {
+  .hero-copy,
+  .bio-card {
     padding: 1.7rem;
   }
 }
