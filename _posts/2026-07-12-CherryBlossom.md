@@ -1,3 +1,11 @@
+---
+title: "Forecasting Peak Cherry Blossom Blooms"
+layout: post
+date: 2026-07-12
+categories: [Modeling]
+tags: [modeling]
+---
+
 # The Challenge
 
 Cherry blossoms are often treated as a symbol of spring's arrival, but predicting exactly when they will bloom is a surprisingly difficult forecasting problem. The National Park Service has been quoted as saying that it is generally impossible to predict more than a week ahead of time. Peak bloom depends on a delicate combination of winter chilling, spring warming, local climate, geography, species differences, and year-to-year weather variability. This makes cherry blossom prediction a natural setting for testing statistical and machine learning methods under uncertainty.
